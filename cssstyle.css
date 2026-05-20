@@ -1,0 +1,286 @@
+/* Custom Global Styling Properties */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --success: #10b981;
+    --error: #ef4444;
+    --warning: #f59e0b;
+    --border: #e2e8f0;
+}
+
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Elegant Navbar with Flex layout */
+header {
+    background-color: var(--dark-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #fff;
+}
+
+/* Main Layout Framework */
+.container {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section Landing Layout */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--dark-bg);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Quiz Progress Metrics Layout */
+.quiz-header {
+    margin-bottom: 2rem;
+}
+
+.progress-container {
+    background-color: var(--border);
+    border-radius: 9999px;
+    height: 8px;
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+#progress-bar {
+    background-color: var(--primary);
+    width: 0%;
+    height: 100%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Elite UI Component Cards */
+.card, .quiz-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.quiz-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Customized interactive choices style items */
+.option-label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.option-label:hover {
+    background-color: var(--light-bg);
+    border-color: var(--text-muted);
+}
+
+.option-label input {
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+
+/* State changes injected dynamically by JavaScript Engine */
+.correct-state {
+    border-left: 6px solid var(--success);
+    background-color: #f0fdf4;
+}
+
+.incorrect-state {
+    border-left: 6px solid var(--error);
+    background-color: #fef2f2;
+}
+
+/* Micro-interaction Button designs */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--text-muted);
+    color: white;
+    margin-top: 1rem;
+}
+
+.quiz-controls {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+/* Dashboard Metrics Styles */
+.hidden-element {
+    display: none !important;
+}
+
+#result-dashboard {
+    background: var(--card-bg);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.score-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--light-bg);
+    border: 4px solid var(--primary);
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#display-total {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+}
+
+.success-text { color: var(--success); font-weight: bold; }
+.warning-text { color: var(--warning); font-weight: bold; }
+.danger-text { color: var(--error); font-weight: bold; }
+
+/* Sticky Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    border-top: 1px solid #1e293b;
+}
+
+/* --- ADAPTIVE ARCHITECTURE (MEDIA QUERIES) --- */
+@media (max-width: 640px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        margin: 1.5rem auto;
+    }
+}

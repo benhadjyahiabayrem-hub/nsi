@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet NSI - Évaluation Dynamique</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">NSI<span>Platform</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="quiz.html" class="active">Lancer le Quiz</a></li>
+                <li><a href="about.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="quiz-header">
+            <h1>Évaluation Interactive</h1>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="quiz-controls">
+            <button id="action-btn" class="btn btn-primary">Valider mes réponses</button>
+        </div>
+
+        <div id="result-dashboard" class="hidden-element">
+            <h2>Tableau de Bord des Résultats</h2>
+            <div class="score-circle">
+                <span id="display-score">0</span><span id="display-total">/0</span>
+            </div>
+            <p id="feedback-message"></p>
+            <button id="restart-btn" class="btn btn-secondary">Recommencer le Quiz</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Spécialité NSI. Développé avec soin.</p>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

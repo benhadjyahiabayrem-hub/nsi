@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet NSI - Architecture</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">NSI<span>Platform</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="quiz.html">Lancer le Quiz</a></li>
+                <li><a href="about.html" class="active">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Détails Techniques de l'Architecture</h1>
+        
+        <section class="card">
+            <h3>Structure de Données Modulaire</h3>
+            <p>Au lieu de figer le contenu dans le fichier HTML, l'application utilise une structure de données JavaScript (un tableau d'objets complexes). Cela permet une scalabilité totale de l'application.</p>
+        </section>
+
+        <section class="card">
+            <h3>Manipulation Dynamique du DOM</h3>
+            <p>Le moteur JavaScript génère dynamiquement l'interface utilisateur, écoute en temps réel les changements d'état (événements <code>change</code> et <code>click</code>), gère une barre de progression mathématiquement proportionnelle, et applique des classes CSS dynamiques pour indiquer visuellement la justesse des réponses.</p>
+        </section>
+
+        <section class="card">
+            <h3>Design System & Adaptabilité</h3>
+            <p>Le design repose sur une architecture CSS utilisant des variables (custom properties), Flexbox, CSS Grid pour les alignements, et des Media Queries pour assurer un rendu fluide de la montre connectée jusqu'à l'écran de bureau.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Spécialité NSI. Développé avec soin.</p>
+    </footer>
+</body>
+</html>
